@@ -2,7 +2,15 @@ language: java
 jdk:
   - oraclejdk9
   - openjdk9
-install:
-  - echo hello
-script:
-  - echo world
+jobs:
+  include:
+    stage: test
+      install:
+        - echo hello test
+      script:
+        - echo world test
+    stage: build
+      install:
+        - echo hello deploy
+      script:
+        - echo world deploy
