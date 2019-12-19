@@ -2,13 +2,16 @@ language: java
 jdk:
   - oraclejdk9
   - openjdk9
-install:
-  - echo hello
 jobs:
   include:
-    stage: test
-      script:
-        - echo world test
-    stage: build
-      script:
-        - echo world deploy
+    - stage: "Tests"                # naming the Tests stage
+      name: "Unit Tests"            # names the first Tests stage job
+      script: 
+        - echo testing
+    - script: 
+      - echo tesing too
+      name: "Integration Tests"     # names the second Tests stage job
+    - stage: deploy
+      name: "Deploy to GCP"
+      script: 
+        - echo deploying
