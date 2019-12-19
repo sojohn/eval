@@ -1,1 +1,5 @@
 language: java
+install:
+  - echo hello
+script:
+  - echo world
