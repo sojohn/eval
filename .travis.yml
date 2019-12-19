@@ -6,6 +6,8 @@ jobs:
   include:
     - stage: "Tests"                # naming the Tests stage
       name: "Unit Tests"            # names the first Tests stage job
+      install:
+        - echo prepare
       script: 
         - echo testing
     - script: 
