@@ -4,16 +4,11 @@ jdk:
   - openjdk9
 jobs:
   include:
-    - stage: "Tests"                # naming the Tests stage
-      name: "Unit Tests"            # names the first Tests stage job
-      install:
-        - echo prepare
-      script: 
+    - stage: test
+      script:
         - echo testing
-    - script: 
-      - echo tesing too
-      name: "Integration Tests"     # names the second Tests stage job
+      script:
+        - echo testing too
     - stage: deploy
-      name: "Deploy to GCP"
       script: 
         - echo deploying
