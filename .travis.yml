@@ -1,14 +1,11 @@
-language: java
+language: java      
 jdk:
   - oraclejdk9
   - openjdk9
-jobs:
-  include:
-    - stage: test
-      script:
-        - echo testing
-    - script:
-        - echo testing too
-    - stage: deploy
-      script: 
-        - echo deploying
+
+install:
+  - echo installing
+- script:
+  - echo testing
+- script:
+  - echo deploy
