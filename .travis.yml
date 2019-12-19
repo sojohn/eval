@@ -5,7 +5,10 @@ jdk:
 
 install:
   - echo installing
-- script:
-  - echo testing
-- script:
-  - echo deploy
+stage: test
+  name: testing 1 
+  script:
+    - echo testing
+stage: deploy
+  script:
+    - echo deploy
