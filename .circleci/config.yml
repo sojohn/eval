@@ -28,6 +28,6 @@
        - one
        - two
        - three:
-        requires:
-          - one
-          - two
+           requires:
+             - one
+             - two
